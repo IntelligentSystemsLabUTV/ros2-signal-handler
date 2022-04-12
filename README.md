@@ -1,4 +1,4 @@
-# ros2_signal_handler
+# ros2-signal-handler
 
 Signal handler module for ROS 2 applications.
 
