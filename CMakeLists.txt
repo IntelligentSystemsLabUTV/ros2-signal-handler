@@ -7,6 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -20,14 +21,10 @@ if(BUILD_TESTING)
 endif()
 
 # install headers
-#! this package exists just for this
-install(DIRECTORY include/
+install(DIRECTORY include
   DESTINATION include)
 
 # export headers for ament
-#! don't forget this step or hell will be break loose
-ament_export_include_directories(
-  include
-)
+ament_export_include_directories(include)
 
 ament_package()
