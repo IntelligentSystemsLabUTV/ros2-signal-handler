@@ -7,6 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -25,7 +26,6 @@ install(DIRECTORY include/ros2_signal_handler
   DESTINATION include)
 
 # export headers for ament
-#! don't forget this step or hell will be break loose
 ament_export_include_directories(include)
 
 ament_package()
