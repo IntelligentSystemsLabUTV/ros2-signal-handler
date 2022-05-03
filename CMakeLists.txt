@@ -21,13 +21,11 @@ endif()
 
 # install headers
 #! this package exists just for this
-install(DIRECTORY include/
+install(DIRECTORY include/ros2_signal_handler
   DESTINATION include)
 
 # export headers for ament
 #! don't forget this step or hell will be break loose
-ament_export_include_directories(
-  include
-)
+ament_export_include_directories(include)
 
 ament_package()
